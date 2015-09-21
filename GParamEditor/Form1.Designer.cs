@@ -28,37 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("ID");
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.RecordCopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RecordDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RecordAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(77, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(172, 114);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(284, 97);
@@ -66,25 +61,81 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Comment";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "a";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "b";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "c";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RecordCopyToolStripMenuItem,
+            this.RecordDeleteToolStripMenuItem,
+            this.RecordAddToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(203, 70);
+            // 
+            // RecordCopyToolStripMenuItem
+            // 
+            this.RecordCopyToolStripMenuItem.Name = "RecordCopyToolStripMenuItem";
+            this.RecordCopyToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.RecordCopyToolStripMenuItem.Text = "レコードのコピー(&C)...";
+            this.RecordCopyToolStripMenuItem.Click += new System.EventHandler(this._RecordCopyToolStripMenuItem_Click);
+            // 
+            // RecordDeleteToolStripMenuItem
+            // 
+            this.RecordDeleteToolStripMenuItem.Name = "RecordDeleteToolStripMenuItem";
+            this.RecordDeleteToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.RecordDeleteToolStripMenuItem.Text = "レコードの削除(&D)...";
+            this.RecordDeleteToolStripMenuItem.Click += new System.EventHandler(this._RecordDeleteToolStripMenuItem_Click);
+            // 
+            // RecordAddToolStripMenuItem
+            // 
+            this.RecordAddToolStripMenuItem.Name = "RecordAddToolStripMenuItem";
+            this.RecordAddToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.RecordAddToolStripMenuItem.Text = "レコードの追加(&A)...";
+            this.RecordAddToolStripMenuItem.Click += new System.EventHandler(this._RecordAddToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 263);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem RecordCopyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RecordDeleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RecordAddToolStripMenuItem;
     }
 }
 

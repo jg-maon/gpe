@@ -100,7 +100,7 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(83, 15);
+            this.button1.Location = new System.Drawing.Point(142, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -111,7 +111,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(164, 15);
+            this.button2.Location = new System.Drawing.Point(83, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(53, 23);
             this.button2.TabIndex = 2;
@@ -152,9 +152,12 @@
             this.ClientSize = new System.Drawing.Size(229, 172);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RecordListDialog";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "RecordListDialog";
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this._RecordListDialog_PreviewKeyDown);

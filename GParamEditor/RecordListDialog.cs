@@ -26,6 +26,19 @@ namespace GParamEditor
             ADD = 0,    //!< 新規追加
             COPY,       //!< コピー
         }
+        private InsertMode m_mode = InsertMode.ADD;
+        public InsertMode Mode
+        {
+            set
+            {
+                m_mode = value;
+                _ChangedMode(m_mode);
+            }
+            get
+            {
+                return m_mode;
+            }
+        }
 
 
         private int m_newId = 0;
@@ -40,6 +53,21 @@ namespace GParamEditor
             }
         }
 
+        /// <summary>
+        /// コピー元ID
+        /// </summary>
+        public int CopyBaseId
+        {
+            set 
+            {
+                m_copyBaseIdBox.Value = value;
+            }
+            get
+            {
+                return (int)(m_copyBaseIdBox.Value);
+            }
+        }
+
 
         /// <summary>
         /// コンストラクタ
@@ -49,7 +77,7 @@ namespace GParamEditor
         public RecordListDialog(InsertMode insertMode = InsertMode.ADD, List<Parameter.ParameterBase> idList = null)
         {
             InitializeComponent();
-
+            m_mode = insertMode;
             IdList = idList;
             _ChangedMode(insertMode);
         }
