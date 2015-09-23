@@ -67,6 +67,18 @@ namespace GParamEditor
                 return (int)(m_copyBaseIdBox.Value);
             }
         }
+        
+        /// <summary>
+        /// コメント
+        /// </summary>
+        public string NewComment
+        {
+            get
+            {
+                return m_commentBox.Text;
+            }
+        }
+
 
 
         /// <summary>
@@ -98,6 +110,13 @@ namespace GParamEditor
         /// </summary>
         private void _Accept()
         {
+            // IDの入力チェック
+            if (0 == m_idBox.Text.Length)
+            {
+                MessageBox.Show("作成するIDが未入力です", "追加エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             bool ok = true;
             // IDの重複チェック
             if (null != IdList)
@@ -114,7 +133,7 @@ namespace GParamEditor
                 }
                 if(hasId)
                 {
-                    DialogResult result = MessageBox.Show("作成先のIDが既に存在しています\n上書きしますか？", "ID重複", MessageBoxButtons.OKCancel);
+                    DialogResult result = MessageBox.Show("作成先のIDが既に存在しています\n上書きしますか？", "追加エラー", MessageBoxButtons.OKCancel);
                     ok = (DialogResult.OK == result); 
                 }
             }
@@ -188,6 +207,7 @@ namespace GParamEditor
         }
 
         #endregion  // イベント
+
 
     }
 }
